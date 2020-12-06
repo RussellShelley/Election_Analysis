@@ -1,7 +1,8 @@
 # Election Audit
 
 ## Project Overview
-A Colorado Board of Elections employee has given the following tasks to complete the election audit of a recent local elecetion.
+A Colorado Board of Elections employee has given the following tasks to complete the election audit of a recent local elecetion.  Using the data provided in a csv file.
+
 
 1. Calculate the total number of votes cast.
 2. Get a complete list of candidates who recieved votes.
@@ -11,10 +12,13 @@ A Colorado Board of Elections employee has given the following tasks to complete
 
 ## Resources
 - Data Source: election_results.csv
-- Software Python 3.7.6, Visual code studio 1.51
+[Election_Data](Resources/election_results.csv)
+
+- Software Python 3.7.6, Visual Studio Code 1.51
 
 ## Results
-The analysis shows that:
+Upon running the python script we can see that
+the analysis shows:
 - Total Votes Cast = 369,711
 - The candidates who recieved votes were:
   - Charles Casper Stockham
@@ -40,9 +44,9 @@ The election commission has requested some additional data to complete the audit
 2. The percentage of votes from each county out of the total count
 3. The county with the highest turnout
 
-This results should be printed to the command line and saved election_results.txt file.  An analysis should be included.
+These results should be printed to the command line and saved election_results.txt file.  
 
-## Challenge Election Audit Results
+## County Election Audit Results
 
 The requested results for the challenge were as follows:
 
@@ -61,6 +65,17 @@ The requested results for the challenge were as follows:
 - **County with the highest turnout:**
     - **Denver had the highest turnout, 306,055 votes which is 82.8% of total votes cast.**
 
-## Challenge Summary
+The county results along with the candidate results can be seen in the following output text file.
 
-Election-Audit Summary: In a summary statement, provide a business proposal to the election commission on how this script can be used—with some modifications—for any election. Give at least two examples of how this script can be modified to be used for other elections.
+[Election Results Text File](analysis/election_analysis.txt)
+
+The results will also be printed in the command line.  See screenshot below:
+
+![ElectionResults](https://github.com/RussellShelley/Imagefiles/blob/main/ElectionResultsTerminal.png?raw=true)
+
+## Election Audit Summary
+
+This code has great potential to be reused in other elections.
+It could be altered to work for ballots with multiple candidate races.  If more electoral positions were on the ballot, the voters choices could be returned on additional columns via the CSV file. We can modify the code so as to gather a seperate set of candidate data from the new columns [3] [4] etc. The loops we used to gather and then print data can be made into functions, which can be applied to each column. Additionaly we could modify the code to have a user input to determine how many races to return data from.
+
+Another modification is to make the "file to open" an user input.  This can increase reusabilty by allowing the user to select any file to read from.
